@@ -28,8 +28,6 @@ def main():
     
     for name in unconverted_names:
         path=in_path+name+".NEF"
-        count = +1
-
         with rawpy.imread(path) as raw:
             rgb = raw.postprocess()
             imageio.imwrite(path.replace('.NEF', '.jpg'), rgb)
