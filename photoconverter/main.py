@@ -30,7 +30,7 @@ def main():
         path=in_path+name+".NEF"
         with rawpy.imread(path) as raw:
             rgb = raw.postprocess()
-            imageio.imwrite(path.replace('.NEF', '.jpg'), rgb)
+            imageio.imwrite(out_path+name+".jpg", rgb)
             count = count + 1
             print('image #', count, ' done')
 
